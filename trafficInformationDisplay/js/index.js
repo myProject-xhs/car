@@ -1,4 +1,5 @@
 
+// 时间区间数组
 let date = []
 // 获取时间区间
 function getDateExtent() {
@@ -12,8 +13,6 @@ function getDateExtent() {
     date.push([padStart(t), padStart(min)].join(':'))
     min += 5;
   }
-  
-  console.log(date)
   return date
 }
 getDateExtent()
@@ -52,7 +51,8 @@ setInterval(function () {
       trigger: 'axis',
       position: function (pt) {
         return [pt[0], '10%'];
-      }
+      },
+      formatter: '{b0}<br /> 车流量: {c0} 辆/分钟'
     },
     grid: {
       top: "10%"
@@ -94,6 +94,7 @@ setInterval(function () {
     series: [
       {
         name: '车流量',
+        show:false,
         type: 'line',
         smooth: true,
         symbol: 'none',
@@ -136,7 +137,8 @@ setInterval(function () {
       position: function (p) {
         //其中p为当前鼠标的位置
         return [p[0] + 10, p[1] - 10];
-      }
+      },
+      formatter: '{b0}<br /> 车流量: {c0} 辆/分钟'
     },
     legend: {
       top: "90%",
@@ -191,7 +193,8 @@ setInterval(function () {
       trigger: 'axis',
       position: function (pt) {
         return [pt[0], '10%'];
-      }
+      },
+      formatter: '{b0}<br /> 车流量: {c0} 辆/分钟'
     },
     grid: {
       bbottom: "50%"
@@ -272,7 +275,8 @@ setInterval(function () {
       trigger: 'axis',
       position: function (pt) {
         return [pt[0], '10%'];
-      }
+      },
+      formatter: '{b0}<br /> 车流量: {c0} 辆/分钟'
     },
     grid: {
       top: "10%"
@@ -352,9 +356,6 @@ setInterval(function () {
       top: "10%",
       left: "22%",
       bottom: "10%"
-    },
-    tooltip: {
-      formatter: "{a} <br/>{c} {b}"
     },
     toolbox: {
       show: true,
