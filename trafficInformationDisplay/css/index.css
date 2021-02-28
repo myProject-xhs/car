@@ -253,3 +253,18 @@ header .showTime {
     font-size: 80px !important;
   }
 }
+header {
+  position: relative;
+}
+header > h1 >  div.tabs{
+  position: absolute;
+  font-size: 13px;
+  color: #ffeb7b;
+  bottom: 0;
+  left: 30px;
+}
+h1 >  div.tabs > span {
+  cursor: pointer;
+  padding: 0 5px;
+  user-select: none;
+}

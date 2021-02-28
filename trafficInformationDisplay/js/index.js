@@ -453,4 +453,6 @@ setInterval(function () {
   }, 5000);
 })();
 
-
+$('#tabs').on('click','span',function(e) {
+  console.log(e)
+})
